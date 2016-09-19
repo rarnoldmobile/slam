@@ -1,0 +1,7 @@
+{
+	"data": "data",
+	"out": "out",
+	"scripts": "scripts",
+	"temp": "temp",
+	"languages": ["r", "python", "sas"]
+}
