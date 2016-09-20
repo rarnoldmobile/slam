@@ -57,15 +57,16 @@ class App {
         if (!oa)
             return
 
+        if (oa.i) {
+            System.out.println("Init environment")
+            Initializer.runInitializer(slamStructure)
+        }
+
         if (oa.c) {
             System.out.println("Running Task: Environment Clean")
             Cleaner.cleanOutputDirectory(slamStructure)
         }
 
-        if (oa.i) {
-            System.out.println("Init environment")
-            Initializer.runInitializer(slamStructure)
-        }
     }
 
 

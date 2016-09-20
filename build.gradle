@@ -11,6 +11,7 @@
 // Apply the java plugin to add support for Java
 apply plugin: 'groovy'
 apply plugin: 'application'
+apply plugin: 'distribution'
 
 mainClassName = "io.datao.slam.App"
 
