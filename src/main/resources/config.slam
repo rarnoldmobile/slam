@@ -3,5 +3,30 @@
 	"out": "out",
 	"scripts": "scripts",
 	"temp": "temp",
-	"languages": ["r", "python", "sas"]
+	"languages": ["r", "python", "sas"],
+	"steps" : [
+	    {
+	        "sequence": 1,
+	        "taskId": "runScript1"
+	    },
+	    {
+	        "sequence": 2,
+	        "taskId": "runSomething"
+	    }
+	],
+	"tasks": [
+	    {
+	        "id": "runScript1",
+	        "language": "r",
+	        "scriptName": "test.r",
+	        "argString": ":teststring1 :teststring2"
+	    },
+	    {
+	        "id": "runSomething",
+	        "language": "r",
+	        "scriptName": "test.r",
+	        "argString": ":teststring"
+	    }
+	],
+	"variableString": ":teststring :teststring2 :teststring"
 }
