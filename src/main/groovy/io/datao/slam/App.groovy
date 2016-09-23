@@ -7,7 +7,7 @@ import io.datao.slam.tasks.Cleaner
 import io.datao.slam.tasks.Initializer
 
 import groovy.json.JsonSlurper
-
+import io.datao.slam.tasks.Validator
 import org.apache.commons.cli.Option
 /**
  * Created by robertarnold on 9/17/16.
@@ -47,6 +47,7 @@ class App {
         cli.with {
             i longOpt: 'init', 'Initialize a new project directory', args: 0
             c longOpt: 'clean', 'Clean the project directory', args: 0
+            v longOpt: 'validate', 'Validate the config file', args: 0
         }
 
         return cli
@@ -65,6 +66,11 @@ class App {
         if (oa.c) {
             System.out.println("Running Task: Environment Clean")
             Cleaner.cleanOutputDirectory(slamStructure)
+        }
+
+        if (oa.v) {
+            System.out.println("Validating Configuration File")
+            Validator.performValidation(slamStructure)
         }
 
     }

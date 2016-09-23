@@ -2,6 +2,8 @@
 
 Slam is a command line application focused on bootstrapping data science projects, as well as running them from end to end.
 
+[TOC]
+
 ## Installation
 
 On OSX: 
@@ -41,6 +43,32 @@ Cleaning will get rid of all output, and temporary artifacts
 
 slam --clean 
 ```
+
+## Validating a Project file
+
+Validating the config.slam file being used - can be performed with
+
+```sh
+
+slam --validate
+```
+
+This will ensure your config file is well formed, and meets all standards
+
+
+## Running the Data Pipeline
+
+Running the data pipeline, can be performed by:
+
+```sh
+
+slam --run <arguments>
+```
+
+Note however, in order for the pipeline to you run - you *must* have a config.slam file created.  This will be where you declare all tasks.
+
+For more information on the config.slam format - see the section: "Run Configuration".
+
 
 ## Run Configuration
 
